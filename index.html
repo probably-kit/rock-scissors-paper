@@ -16,16 +16,24 @@
         <div class="main">
             <h2 class="txt">Select your weapon</h2>
             <div class="container">
-                <button>🗿</button>
-                <button>✂</button>
-                <button>📄</button>
+                <button value="Rock" onclick ="playRound(value,getComputerChoice())">🗿</button>
+                <button value="Scissors" onclick ="playRound(value,getComputerChoice())">✂</button>
+                <button value="Paper" onclick ="playRound(value,getComputerChoice())">📄</button>
             </div>
             <h2 class="txt">Score:</h2>
+            <div class="txt" id="info">round result</div>
             <div class="container txt">
-                <p>Human:</p> <p>Computer:</p>
+                <p id ="HumanScore">Human: 0</p> <p id="ComputerScore">Computer: 0</p>
             </div>
         </div>
-        <footer class="shadow-txt">
+        <div id="customAlert" class="custom-alert">
+            <div class="custom-alert-content">
+              <span class="txt" id="customAlertMessage"></span>
+              <button class= shadow-txt id="customAlertButton" onclick="hideCustomAlert()">Play again</button>
+            </div>
+          </div>
+          
+        <footer class="shadow-txt"> 
             <p>Copyrigth © probably-kit 2023</p>
         </footer>
     </div>
